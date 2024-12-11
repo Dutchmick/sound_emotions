@@ -7,50 +7,21 @@
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
+├── LICENSE            <- Open-source license
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
-│   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
-││
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         emotions_from_sound and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
+├── app                <- Location of all code for EDA, labelling and modelling
+├── django-app         <- API for predicting emotions from audio files
+├── models             <- Trained and serialized models, model predictions, or model summaries│
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── emotions_from_sound   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes emotions_from_sound a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+                         generated with `pip freeze > requirements.txt`
+
 ```
 
 --------
@@ -66,7 +37,7 @@ Feature Engineering and Embedding Extraction: Use the Wav2Vec2 model to extract 
 Model Training: Train a Random Forest model using the manually labeled data.
 API Integration: Deploy the trained model as a REST API using Django.
 
-##Features
+## Features
 **Audio Analysis**: Extract features like MFCCs, zero-crossing rates, and spectral contrast for exploratory analysis.
 
 **Pre-trained Embedding Extraction**: Use Wav2Vec2 for feature extraction.
@@ -113,21 +84,21 @@ Spectral contrast
 Chromagram
 
 **Key insights:**
-- The audio files are clean with no background noise.
-- Each file contains the same phrase, "Kids are talking by the door," making it easier to isolate emotions.
+* The audio files are clean with no background noise.
+* Each file contains the same phrase, "Kids are talking by the door," making it easier to isolate emotions.
 * All files are stereo and share a consistent sample rate.
 * Feature Engineering and Embedding Extraction
 * Used the Wav2Vec2 model to generate embeddings from audio files.
 
 **Clustering and Manual Labeling**
-- Applied K-means clustering to group audio files based on Wav2Vec2 embeddings.
-- Plotted the clusters using PCA for dimensionality reduction.
-- Manually labeled the clusters with emotion labels (Happy, Sad, Angry, Calm).
+* Applied K-means clustering to group audio files based on Wav2Vec2 embeddings.
+* Plotted the clusters using PCA for dimensionality reduction.
+* Manually labeled the clusters with emotion labels (Happy, Sad, Angry, Calm).
 
 **Model Training**
-- Split the data into training and testing sets using stratified sampling.
-- Trained a Random Forest classifier with hyperparameter tuning via grid search.
-- Achieved a classification accuracy of ~90% on test data.
+* Split the data into training and testing sets using stratified sampling.
+* Trained a Random Forest classifier with hyperparameter tuning via grid search.
+* Achieved a classification accuracy of ~90% on test data.
 
 **API Endpoint**
 Description: Accepts an audio file and returns the predicted emotion.

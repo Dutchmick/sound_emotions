@@ -5,4 +5,8 @@ pandas
 numpy
 librosa
 pickle
+matplotlib
+torch
+transformers
+sklearn
 -e .
