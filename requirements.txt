@@ -1,0 +1,8 @@
+datetime
+python-dotenv
+ipykernel
+pandas
+numpy
+librosa
+pickle
+-e .
