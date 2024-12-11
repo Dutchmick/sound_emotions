@@ -1,5 +1,9 @@
 # Objective
-
+''''
+Extract embeddings from the audio files using a pre-trained model
+which can be used to classify the emotions in the files into
+4 different emotions
+'''
 
 # Load required libraries
 import os

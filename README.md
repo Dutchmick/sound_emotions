@@ -161,9 +161,9 @@ with open(path_file_test_audio, 'rb') as f:
 Use curl, Postman, or the Python script (described above) to test the API manually.
 
 ## Future Improvements
-- Improve emotion prediction accuracy with fine-tuned Wav2Vec2 models.
+- Improve emotion prediction accuracy with a fine-tuned Wav2Vec2 model.
+- Add unit testing, model drift checks, logging and other tests.
 - Django to automatically take the latest model.
-- Add unit testing, de and other tests
 - Potentially add features from EDA to improve model performance.
 - Create API front-end
 - Automatically move processed audio files to a separate folder

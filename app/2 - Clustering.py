@@ -1,5 +1,10 @@
 # Objective
-
+''''
+Use created embeddings to classify audio files into 4 clusters 
+of emotions. After craeting the clusters, I will assing a label
+to each of the created clusters by manuall inspecting a subset
+of audio files.
+'''
 
 # Load libraries
 import numpy as np

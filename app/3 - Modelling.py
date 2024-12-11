@@ -1,4 +1,8 @@
 # Objective
+''''
+Use extracted audio embeddings and assigned labels to create
+a model which can be used to predict emotions of new audio files.
+'''
 
 # Load packages
 import numpy as np
