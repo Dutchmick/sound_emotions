@@ -90,7 +90,7 @@ Chromagram
 * Feature Engineering and Embedding Extraction
 * Used the Wav2Vec2 model to generate embeddings from audio files.
 
-**Clustering and Manual Labeling**
+**Clustering and dataset labelling**
 * Applied K-means clustering to group audio files based on Wav2Vec2 embeddings.
 * Plotted the clusters using PCA for dimensionality reduction.
 * Manually labeled the clusters with emotion labels (Happy, Sad, Angry, Calm).
@@ -133,9 +133,11 @@ Use curl, Postman, or the Python script (described above) to test the API manual
 
 ## Future Improvements
 - Improve emotion prediction accuracy with a fine-tuned Wav2Vec2 model.
-- Add unit testing, model drift checks, logging and other tests.
-- Django to automatically take the latest model.
+- Refactor code to run more efficient.
 - Potentially add features from EDA to improve model performance.
+- Add batch processing to improve processing speed
+- Add audio quality checks
+- Add unit testing, model drift checks, logging and other tests.
 - Create API front-end
 - Automatically move processed audio files to a separate folder
 - Automate data labeling for real-world datasets.

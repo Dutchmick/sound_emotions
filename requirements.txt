@@ -1,12 +1,17 @@
+os
 datetime
+jupyterlab
+numpy==2.0.2
+pandas==2.2.3
+scikit-learn==1.5.2
 python-dotenv
-ipykernel
-pandas
-numpy
-librosa
+ipykernel==6.29.5
+librosa==0.10.2.post1
+matplotlib==3.9.3
+torch==2.5.1
+transformers==4.46.3
+logging
+Django==5.1.4
+pathlib
 pickle
-matplotlib
-torch
-transformers
-sklearn
 -e .

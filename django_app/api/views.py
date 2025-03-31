@@ -7,7 +7,7 @@ from rest_framework.parsers import FileUploadParser
 import pickle
 
 # Load model and initialize components
-model_path = "../models/latest_model.pkl"
+model_path = "../models/20250330-215204_model.pkl"
 wav2vec_model_name = "facebook/wav2vec2-large-960h-lv60-self"
 
 # Load the trained RandomForest model

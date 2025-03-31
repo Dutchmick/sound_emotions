@@ -1,0 +1,19 @@
+# Configuration file for the machine learning pipeline.
+# This file contains all parameters and settings required for running the pipeline
+
+# Data-related configurations
+data:
+  # Paths to the data files. The file should be in wav format and optionally compressed (e.g., .gz).
+  folder_raw: "sound_emotions/data/raw/"
+  folder_processed: "sound_emotions/data/processed/"
+  folder_interim: "sound_emotions/data/interim/"
+  folder_models: "sound_emotions/models/"
+  # Sample rate when loading data (16000 is standard)
+  sample_rate: 16000
+
+# Logging-related configurations
+logging:
+  # Path to the log file where the pipeline logs will be stored.
+  log_file: "logs/app.log"
+  # Logging level to control the verbosity of logs (e.g., INFO, DEBUG, ERROR).
+  level: "INFO"
